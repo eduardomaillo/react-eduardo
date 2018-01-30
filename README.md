@@ -4,22 +4,13 @@ Clone or Fork the repo
 
 You need npm and yarn installed (For Mac, `brew install npm` and `brew install yarn`).
 
-To install run `npm install`
+To install run `yarn install`
 
 To start a local server run the command `yarn start` in the root directory of the repository.
 
-After completion you can 
-
-- email chris.wu@loan-street.com a zip
-`git archive --format zip --output /full/path/to/zipfile.zip master`
-
-- Or you can submit a pull request
-
-- Or you can email the url of the repo if public
-
 # Assignment
 
-Please complete in any order whichever features or questions you wish. If you're doing this on-site, it's not expected that everything is completed within an hour.  When complete, just submit a PR.  Thank you!
+Please complete in any order whichever features or questions you wish, but please attempt at least one feature and one question. If you're doing this on-site, it's not expected that everything is completed within an hour.  When complete, just submit a PR.  Thank you!
 
 ## Features
 
