@@ -1,6 +1,6 @@
 # Setup
 
-Clone or Fork the repo 
+Fork the repo and submit a PR when you are finished.  Please feel free to google, use stackoverflow, or any other resource you normally would short of directly asking another person for assistance. 
 
 You need npm and yarn installed (For Mac, `brew install npm` and `brew install yarn`).
 
