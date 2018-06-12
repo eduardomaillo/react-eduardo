@@ -25,13 +25,33 @@ class DealForm extends Component {
   state = { ...DEFAULT_DEAL };
 
   propertyUpdater(property) {
-    return e => this.setState({[property]: e.target.value});
+    return e => {
+      this.setState({[property]: e.target.value});
+    }
+  }
+
+  clearError() {
+    let x = document.getElementById("ErrorMsg--button");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
   }
 
   createDeal = e => {
     e.preventDefault();
-    if (this.props.onCreateDeal)
-      this.props.onCreateDeal({ ...this.state });
+    
+    if (this.props.onCreateDeal) {
+      if (this.state.dealType && this.state.dealSize && this.state.institution) {
+        this.props.onCreateDeal({ ...this.state });
+      }
+      else {
+        this.clearError()
+      }
+      
+    }
+      
 
     // Reset state for the next deal input.
     this.setState({ ...DEFAULT_DEAL });
@@ -77,6 +97,7 @@ class DealForm extends Component {
           </label>
         </div>
         <button className="NewDealForm--button" onClick={this.createDeal}>Create Deal</button>
+        <button id="ErrorMsg--button" onClick={this.clearError}>Please Fill all Fields</button>
       </form>
     );
   }
